@@ -81,7 +81,7 @@ app.post("/login", (req, res) => {
 
     console.log(`Usuario ${username} autenticado correctamente.`);
 
-    // Registrar intento exitoso en login_logs
+    
     const logQuery = "INSERT INTO login_logs (username) VALUES (?)";
     connection.query(logQuery, [username.trim()], (err) => {
       if (err) {
