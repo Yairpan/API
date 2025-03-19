@@ -154,10 +154,10 @@ app.post("/gastos", (req, res) => {
   monto = parseFloat(monto);
   categoria_id = parseInt(categoria_id);
 
-  if (!monto || isNaN(monto)) console.log("⚠️ monto no es válido");
-  if (!descripcion || descripcion.trim() === "") console.log("⚠️ descripcion no es válida");
-  if (!fecha || fecha.trim() === "") console.log("⚠️ fecha no es válida");
-  if (!categoria_id || isNaN(categoria_id)) console.log("⚠️ categoria_id no es válido");
+  if (!monto || isNaN(monto)) console.log("monto no es válido");
+  if (!descripcion || descripcion.trim() === "") console.log("descripcion no es válida");
+  if (!fecha || fecha.trim() === "") console.log("fecha no es válida");
+  if (!categoria_id || isNaN(categoria_id)) console.log("⚠categoria_id no es válido");
 
   if (!monto || isNaN(monto) || !descripcion || descripcion.trim() === "" || !fecha || fecha.trim() === "" || !categoria_id || isNaN(categoria_id)) {
     return res.status(400).json({ error: "Todos los campos son obligatorios y deben ser válidos" });
